@@ -29,8 +29,8 @@ image::images/product_template.gif[]
 |subcategory| 상품 subcategory | O
 |invoice_price| 인보이스 가격(숫자만 가능) | X
 |size | 상품 크기 | X
-|eancode | 상품 eanode | x
-|moq | 상품 moq | X
+|eancode | 상품 ean Code | x
+|moq | 상품 최소주문수량 | X
 |packing_unit | 상품 포장 단위 | X
 |barcode | 상품barode | X
 |incoterm| incoterm |X
@@ -70,9 +70,9 @@ TIP: 일반적인 경우는 아니지만 만일, 특정 컬럼들만 선택해�
 .상품 데이터 검증 항목
 |===
 |검증 항목 | 설명
-|Vendor 유효성 | 입력한 Vendor 아이디가 존재하는지 확인
-|Brand 유효성  | 입력한 Brand 가 존재하는지 확인
-|상품 종류 유효성 | 입력한 데이터가 saleable/posm/sample 이외의 값이 있는지 확인
+|Vendor 유효성 | 입력한 벤더 ID가 존재하는지 확인
+|Brand 유효성  | 입력한 브랜드가 존재하는지 확인
+|상품 종류 유효성 | 입력한 데이터에 saleable/posm/sample 이외의 값이 있는지 확인
 |===
 
 검증 과정에서 오류가 있으면 프로그램 화면에서 해당 오류를 확인할 수 있다.
@@ -84,7 +84,7 @@ image::images/product_verify_err.gif[]
 image::images/product_verify_ok.gif[]
 
 ===== 데이터 업로드 =====
-검증 과정을 마쳤으면 하단의 [업로드] 버튼을 클릭하여, 데이터를 업로드 합니다.  성공적으로 업로드 되었으면 아래와 같은 메세지를 확인할 수 있다.
+검증 과정을 마쳤으면 하단의 [업로드] 버튼을 클릭하여, 데이터를 업로드한다.  성공적으로 업로드 되었으면 아래와 같은 메세지를 확인할 수 있다.
 
 image::images/upload_product_success.gif[600,400]
 
@@ -96,9 +96,9 @@ image::images/search_product.gif[]
 벤더에서 제공하는 제품의 입점 정보를 관리하는 화면이다. 고객별로 어떠한 브랜드 제품이 공급되고 있는지에 대한 정보를 Excel 을 통하여 업로드 하게 된다. 이러한 데이터를 업로드 하기 위한 기본 템플릿 파일은 제공되지 않는다. 아래와 같은 과정을 통하여 데이터를 업로드 하면 된다.
 
 . 등록하고자 하는 벤더 상품 조회
-. 조회한 상픔 데이터 엑셀로 다운 로드
-. 다운 로드한 엑셀에 입점 정보 입력
-. 수정한 엑셀 파일 업로드
+. 조회한 상픔 데이터 EXCEL로 다운 로드
+. 다운 로드한 EXCEL에 입점 정보 입력
+. 수정한 EXCEL 파일 업로드
 
 위의 과정을 자세히 설명하겠다.
 
@@ -111,10 +111,10 @@ image::images/search_product.gif[]
 image::images/cust_product_list.gif[]
 
 조회::
-조회하려는 벤더와 고객을 선택하여 상품을 조회한다. 조회된 화면을 보면 cust_reference 가 빈 값으로 보이는 상품들이 존재한다. 해당 상품들의 의미는 벤더가 공급하는 상품으로는 등록되어 있지만, 선택한 고객의 입점 상품으로는 등록되어 있지 않은 상태를 말한다.
+조회하려는 벤더와 고객을 선택하여 상품을 조회한다. 조회된 화면을 보면 cust_reference 가 빈 값으로 보이는 상품들이 존재한다. 해당 상품들의 의미는 벤더가 공급하는 상품으로는 등록되어 있지만, 선택한 고객의 입점 상품으로는 등록되어 있지 않은 상태를 의미한다.
 
 내려받기::
-조회된 상품을 [내려받기] 버튼을 클릭하여 엑셀로 저장한다.
+조회된 상품을 [내려받기] 버튼을 클릭하여 EXCEL로 저장한다.
 
 image::images/product_to_excel.gif[]
 
@@ -139,19 +139,13 @@ IMPORTANT: 컬럼명은 cust_id, cust_refernece 를 꼭 지켜줘야 한다. 그
 |GALLERIA	|Galleria
 |GRAND	|Grand
 |HDC	|HDC
-|HYUNDAI_DVP	|Hyundai-Dvp
 |JDC	|JDC
-|JTO	|JTO
 |KOREAN_AIR	|Korean Air
-|KTO	|KTO
-|KVWHC	|KVWHC
 |LOTTE|	Lotte
 |LOTTE_MART	|Lotte Mart
 |NULBO	|Nulbo
-|PARADISE	|Paradise
 |SHILLA	|Shilla
 |SHINSEGAE|	Shinsegae
-|SK	|SK
 |SSI	|SSI
 |TRAVEL_PLACE	|Travel Place
 |T-WAY	|T-Way
@@ -226,53 +220,46 @@ image::images/branch_brand_excel.gif[]
 |DSG	|DONGWHA
 |Enats	|Entas
 |ESTAR	|E*STAR
-|GDA	|GALLERIA DEP. APGUJUNG
 |GRAND	|GRAND
 |HDC	|HDC
 |HSG	|HANWHA SEOUL
 |JDC	|JDC
 |JEJU_AIR	|JEJU AIR
 |JIN_AIR	|JIN AIR
-|JTO	|JTO
 |KAL_CATERING|KAL (CATERING)
 |KAL_GMPDU	|KAL (GMPDU)
 |KAL_GMPUC	|KAL (GMPUC)
-|KAL_ICNUCD|	KAL (ICNUCD)
-|KTO	|KTO
-|KVWHC|	KVWHC
+|KAL_ICNUCD|KAL (ICNUCD)
 |LBB|	LOTTE BUSAN BTQ
-|LBG	|LOTTE BUSAN
-|LCG	|LOTTE COEX
+|LBG|LOTTE BUSAN
+|LCG|LOTTE COEX
 |LGB|	LOTTE GIMHAE BOUTIQUE
-|LGG	|LOTTE GIMHAE
-|LIC	|LOTTE I|NCH|EON
-|LM	|LOTTE MART
-|LO	|LOTTE| ONLINE
-|LSB	|LOTTE SEOUL BTQ
-|LSC	|LOTTE SEOUL
-|LWB	|LOTEE WORLD BTQ
-|LWG	|LOTTE WORLD
-|Nulbo	|Nulbo
-|PARADISE	|PARADISE
+|LGG|LOTTE GIMHAE
+|LIC|LOTTE I|NCH|EON
+|LM|LOTTE MART
+|LO|LOTTE ONLINE
+|LSB|LOTTE SEOUL BTQ
+|LSC|LOTTE SEOUL
+|LWB|LOTEE WORLD BTQ
+|LWG|LOTTE WORLD
+|Nulbo|Nulbo
 |SCG	|SHINSEGAE CENTUM
-|SDC	|SHILLA HDC
-|SDGO	|SHILLA DAEGU
-|SGG	|SHILLA GIMPO
-|SHA	|SHILLA HOTEL ARCADE
-|SIC	|SHILLA INCHEON
-|SJB	|SHILLA JEJU BTQ
-|SJG	|SHILLA JEJU
-|SO	|SHILLA ONLINE
-|SSB	|SHILLA SEOUL BTQ
+|SDC|SHILLA HDC
+|SDGO|SHILLA DAEGU
+|SGG|SHILLA GIMPO
+|SHA|SHILLA HOTEL ARCADE
+|SIC|SHILLA INCHEON
+|SJB|SHILLA JEJU BTQ
+|SJG|SHILLA JEJU
+|SO|SHILLA ONLINE
+|SSB|SHILLA SEOUL BTQ
 |SSC|	SHILLA SEOUL
-|SSGG	|SHINSEGAE DEP KANGNAM
+|SSGG|SHINSEGAE DEP KANGNAM
 |SSGI	|SHINSEGAE INCHEON
 |SSGO	|SHINSEGAE ONLINE
 |SSGS|	SHINSEGAE SEOUL
-|SSI	|HQ
-|TPLACE	|TRAVEL PLACE
+|SSI	|삼숭본사
 |T-WAY	|T-WAY
-|WALKERHILL	|WALKERHILL
 |===
 
 .브랜드 ID 정보
@@ -421,22 +408,22 @@ image::images/upload_sales2.gif[]
 
 .매출 테이블 주요 컬럼
 |===
-|컬럼명 | 설명  | 비고
-|vendor_id	| 벤더 ID | 입력파일명에서 제공
-|brand_id	| 브랜드 ID  | 입력파일명에서 제공
-|cust_branch_id	| 고객지점 ID  | 입력파일명에서 제공
-| year	| 년 | 입력파일명에서 제공
-|month	 | 월  | 입력파일명에서 제공
-|reference	 | 벤더 상품 reference |
-|cust reference | 고객이 부여한 상품 reference
-|in_qty	| 입고량 |
-|in_amt	| 입고금액 |
-|out_qty	 | 판매량 |
-|out_amt	 | 판매금액 |
-|stock_qty | 재고량 |
-|stock_amt	| 재고금액|
-|retail_price | 판매가격 |
-|sales_id | 매출데이터 구분 ID | 이미 존재하고 있는 매출 데이터를 수정할 때 사용
+|컬럼명 | 설명  | 비고|
+|vendor_id	| 벤더 ID | 입력파일명에서 제공|
+|brand_id	| 브랜드 ID  | 입력파일명에서 제공|
+|cust_branch_id	| 고객지점 ID  | 입력파일명에서 제공|
+| year	| 년 | 입력파일명에서 제공|
+|month	 | 월  | 입력파일명에서 제공|
+|reference	 | |벤더 상품 reference |
+|cust reference | 고객이 부여한 상품 reference|
+|in_qty	| |입고량 |
+|in_amt	| |입고금액 |
+|out_qty	 || 판매량 |
+|out_amt	 | |판매금액 |
+|stock_qty | |재고량 |
+|stock_amt	| |재고금액|
+|retail_price | |판매가격 |
+|sales_id | 매출데이터 구분 ID | 이미 존재하고 있는 매출 데이터를 수정할 때 사용|
 |===
 
 매출 테이블의 주요 컬럼에 모두 매핑을 지을 수 없는 경우가 많을 것이다. 최대한 가능한 컬럼까지 매핑을 설정하기를 권한다. 컬럼 매핑을 진행하기 위하여 화면상의 [컬럼 매핑 ] 버튼을 클릭한다.
