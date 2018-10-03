@@ -554,6 +554,39 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#_오퍼">6. 오퍼</a>
+<ul class="sectlevel2">
+<li><a href="#_오퍼_등록">6.1. 오퍼 등록</a>
+<ul class="sectlevel3">
+<li><a href="#_고객_지점_선택_및_추가_상품_선택">6.1.1. 고객 지점 선택 및 추가 상품 선택</a></li>
+<li><a href="#_고객_상품_등록">6.1.2. 고객 상품 등록</a></li>
+<li><a href="#_오퍼_수량_계산">6.1.3. 오퍼 수량 계산</a></li>
+<li><a href="#_오퍼_장바구니_넣기">6.1.4. 오퍼 장바구니 넣기</a></li>
+<li><a href="#_posm_상품_오퍼하기">6.1.5. POSM 상품 오퍼하기</a></li>
+</ul>
+</li>
+<li><a href="#_오퍼_발행_확정">6.2. 오퍼 발행 확정</a></li>
+<li><a href="#_saleable_오퍼_조회">6.3. SALEABLE 오퍼 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_오퍼_수정">6.3.1. 오퍼 수정</a>
+<ul class="sectlevel4">
+<li><a href="#_오퍼_상세_추가">오퍼 상세 추가</a></li>
+</ul>
+</li>
+<li><a href="#_관련_파일_추가">6.3.2. 관련 파일 추가</a></li>
+<li><a href="#_주문서_작성">6.3.3. 주문서 작성</a>
+<ul class="sectlevel4">
+<li><a href="#_주문서_작성창_열기">주문서 작성창 열기</a></li>
+<li><a href="#_오더_양식_읽어_오기">오더 양식 읽어 오기</a></li>
+<li><a href="#_오더_양식_설정하기">오더 양식 설정하기</a></li>
+<li><a href="#_데이터_검증_2">데이터 검증</a></li>
+<li><a href="#_주문서_작성_2">주문서 작성</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -813,7 +846,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_브랜드별_입점_정보">4.3. 브랜드별 입점 정보</h3>
 <div class="paragraph">
-<p>벤더가 제공하는 상품들이 어떤 고객 지점에 입점되어 있는지 확인할 수 있는 기능이다. 고객 지점의 상품으로 등록되어 지지 않은 상품은 오퍼를 통해서 제품을 주문할 수 없다.</p>
+<p>벤더가 제공하는 상품들이 어떤 고객 지점에 입점되어 있는지 확인할 수 있는 기능이다. 고객 지점의 상품으로 등록되어 있지 않은 상품은 오퍼를 통해서 제품을 주문할 수 없.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -832,7 +865,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dd>
 <dt class="hdlist1">고객 입점 상품 추가 </dt>
 <dd>
-<p>현재 버전에서는 엑셀을 통한 업로드와, 오퍼를 생성하는 화면에서 개별 상품별로 등록할 수 있다. 해당 기능을 소개할 때 자세히 설명하겠다.</p>
+<p>현재 버전에서는 엑셀을 통한 업로드와, 오퍼를 생성하는 화면에서 개별 상품별로 등록할 수 있다. 자세한 내용은 해당 기능 메뉴얼을 참조하라.</p>
 </dd>
 <dt class="hdlist1">내려받기</dt>
 <dd>
@@ -844,7 +877,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_벤더_브랜드">4.4. 벤더 - 브랜드</h3>
 <div class="paragraph">
-<p>새로운 벤더를 생성하거나, 특정 벤더의 브랜드를 추가하고자 할 때 사용한다.</p>
+<p>새로운 벤더를 생성하거나, 특정 벤더의 브랜드를 추가하고자 할 때 사용한다. (Rule: 하나의 벤더는 두 개 이상의 브랜드를 공급할 수 있다.)</p>
 </div>
 <div class="sect3">
 <h4 id="_벤더_생성">4.4.1. 벤더 생성</h4>
@@ -923,7 +956,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Currency for Sale : Sales 에 사용되는 통화 단위를 지정한다.</p>
 </li>
 <li>
-<p>Currency for Net : 순이익에 사용되는 통화 단위를 지정한다</p>
+<p>Currency for Net : 공급 가격에 사용되는 통화 단위를 지정한다</p>
 </li>
 <li>
 <p>Currency for Invoice : 인보이스에 사용되는 통화 단위를 지정한다.</p>
@@ -1173,14 +1206,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_계정_관리">4.9. 계정 관리</h3>
 <div class="paragraph">
-<p>내부 비용에 대한 비용 계정 코드를 관리할 수 있는 기능입니다.
-현재 개발중입니다.</p>
+<p>내부 비용에 대한 비용 계정 코드를 관리할 수 있는 기능이다.
+(현재 개발중)</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_거래처_기본_정보">4.10. 거래처 기본 정보</h3>
 <div class="paragraph">
-<p>거래처는 벤더나 고객 외에도, 비용을 지급하거나 청구하는 창구를 말합니다. 예를 들어 지출 결의서를 작성할 때 사용할 수 있습니다.</p>
+<p>거래처는 벤더나 고객 외에도, 비용을 지급하거나 청구하는 창구를 의미한다. 예를 들어 지출 결의서를 작성할 때 사용할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1335,12 +1368,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">eancode</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">상품 eanode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 ean Code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">moq</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">상품 moq</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 최소주문수량</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
 </tr>
 <tr>
@@ -1468,15 +1501,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Vendor 유효성</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 Vendor 아이디가 존재하는지 확인</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 벤더 ID가 존재하는지 확인</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brand 유효성</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 Brand 가 존재하는지 확인</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 브랜드가 존재하는지 확인</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">상품 종류 유효성</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 데이터가 saleable/posm/sample 이외의 값이 있는지 확인</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">입력한 데이터에 saleable/posm/sample 이외의 값이 있는지 확인</p></td>
 </tr>
 </tbody>
 </table>
@@ -1500,7 +1533,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="_데이터_업로드">데이터 업로드</h5>
 <div class="paragraph">
-<p>검증 과정을 마쳤으면 하단의 [업로드] 버튼을 클릭하여, 데이터를 업로드 합니다.  성공적으로 업로드 되었으면 아래와 같은 메세지를 확인할 수 있다.</p>
+<p>검증 과정을 마쳤으면 하단의 [업로드] 버튼을 클릭하여, 데이터를 업로드한다.  성공적으로 업로드 되었으면 아래와 같은 메세지를 확인할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1529,13 +1562,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>등록하고자 하는 벤더 상품 조회</p>
 </li>
 <li>
-<p>조회한 상픔 데이터 엑셀로 다운 로드</p>
+<p>조회한 상픔 데이터 EXCEL로 다운 로드</p>
 </li>
 <li>
-<p>다운 로드한 엑셀에 입점 정보 입력</p>
+<p>다운 로드한 EXCEL에 입점 정보 입력</p>
 </li>
 <li>
-<p>수정한 엑셀 파일 업로드</p>
+<p>수정한 EXCEL 파일 업로드</p>
 </li>
 </ol>
 </div>
@@ -1561,11 +1594,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">조회</dt>
 <dd>
-<p>조회하려는 벤더와 고객을 선택하여 상품을 조회한다. 조회된 화면을 보면 cust_reference 가 빈 값으로 보이는 상품들이 존재한다. 해당 상품들의 의미는 벤더가 공급하는 상품으로는 등록되어 있지만, 선택한 고객의 입점 상품으로는 등록되어 있지 않은 상태를 말한다.</p>
+<p>조회하려는 벤더와 고객을 선택하여 상품을 조회한다. 조회된 화면을 보면 cust_reference 가 빈 값으로 보이는 상품들이 존재한다. 해당 상품들의 의미는 벤더가 공급하는 상품으로는 등록되어 있지만, 선택한 고객의 입점 상품으로는 등록되어 있지 않은 상태를 의미한다.</p>
 </dd>
 <dt class="hdlist1">내려받기</dt>
 <dd>
-<p>조회된 상품을 [내려받기] 버튼을 클릭하여 엑셀로 저장한다.</p>
+<p>조회된 상품을 [내려받기] 버튼을 클릭하여 EXCEL로 저장한다.</p>
 </dd>
 </dl>
 </div>
@@ -1644,28 +1677,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">HDC</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HYUNDAI_DVP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hyundai-Dvp</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JDC</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JDC</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JTO</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KOREAN_AIR</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Korean Air</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KTO</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KVWHC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KVWHC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE</p></td>
@@ -1680,20 +1697,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Nulbo</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PARADISE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Paradise</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Shilla</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Shinsegae</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SK</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SK</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSI</p></td>
@@ -1889,10 +1898,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">E*STAR</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GDA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GALLERIA DEP. APGUJUNG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GRAND</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GRAND</p></td>
 </tr>
@@ -1917,10 +1922,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">JIN AIR</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JTO</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KAL_CATERING</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KAL (CATERING)</p></td>
 </tr>
@@ -1935,14 +1936,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KAL_ICNUCD</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KAL (ICNUCD)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KTO</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KVWHC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KVWHC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LBB</p></td>
@@ -1978,107 +1971,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE ONLINE</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONLINE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LSB</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE SEOUL BTQ</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LSC</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE SEOUL</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LWB</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LOTEE WORLD BTQ</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LWG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LOTTE WORLD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nulbo</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Nulbo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PARADISE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nulbo</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PARADISE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SCG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE CENTUM</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SDC</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA HDC</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SDGO</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA DAEGU</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SGG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA GIMPO</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHA</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA HOTEL ARCADE</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SIC</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA INCHEON</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SJB</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA JEJU BTQ</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SJG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA JEJU</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SO</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA ONLINE</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSB</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA SEOUL BTQ</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSC</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHILLA SEOUL</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSGG</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE DEP KANGNAM</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSGI</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE INCHEON</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSGO</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE ONLINE</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSGS</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SHINSEGAE SEOUL</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HQ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TPLACE</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TRAVEL PLACE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">T-WAY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삼숭본사</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">T-WAY</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WALKERHILL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">T-WAY</p></td>
 </tr>
 </tbody>
 </table>
@@ -2547,82 +2528,98 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 7. 매출 테이블 주요 컬럼</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">컬럼명</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">설명</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">비고</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">vendor_id</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">벤더 ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입력파일명에서 제공</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">brand_id</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">브랜드 ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입력파일명에서 제공</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cust_branch_id</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">고객지점 ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입력파일명에서 제공</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">year</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">년</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입력파일명에서 제공</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">month</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">월</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입력파일명에서 제공</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">reference</p></td>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">벤더 상품 reference</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cust reference</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">고객이 부여한 상품 reference</p></td>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">in_qty</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입고량</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">in_amt</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">입고금액</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">out_qty</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">판매량</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">out_amt</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">판매금액</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">stock_qty</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">재고량</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">stock_amt</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">재고금액</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">retail_price</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">판매가격</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sales_id</p></td>
@@ -2764,11 +2761,526 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_오퍼">6. 오퍼</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>본 섹션에서는 고객 상품으로 등록된 브랜드 제품을 오퍼하는 방법에 대하여 설명하겠다.</p>
+</div>
+<div class="sect2">
+<h3 id="_오퍼_등록">6.1. 오퍼 등록</h3>
+<div class="paragraph">
+<p>신규 오퍼를 등록하려면 메인 화면에서 [오퍼/주문] &#8594; [오퍼 등록] 메뉴를 클릭한다.</p>
+</div>
+<div class="paragraph">
+<p>(중요) 오퍼를 하기 위해서는 우선 제품을 검색해야 한다</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer_add_1.gif" alt="offer add 1">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>벤더 선택 : 검색하고자 하는 벤더를 선택한다.</p>
+</li>
+<li>
+<p>브랜드 선택 : 검색하고자 하는 브랜드를 선택한다.</p>
+</li>
+<li>
+<p>고객 선택 : 고객을 선택한다.</p>
+</li>
+<li>
+<p>상품 종류 선택 : 상품 종류 (Saleable/Posm) 를 선택한다.</p>
+</li>
+<li>
+<p>지점 선택 : 고객 지점을 선택한다.</p>
+</li>
+<li>
+<p>건수 : 검색하고자 하는 제품 건수를 입력한다.</p>
+</li>
+<li>
+<p>조회 : 선택한 조건에 맞는 제품을 선택한다.</p>
+</li>
+<li>
+<p>장바구니 : 선택한 제품을 오퍼 장바구니에 담는다.</p>
+</li>
+<li>
+<p>고객 상품 등록 : 선택한 제품을 고객 상품으로 등록한다.</p>
+</li>
+<li>
+<p>기준월 : 오퍼 기준월을 선택한다. 예를 들어 2018년 8월을 선택한 경우, 5월, 6월 7월 삼개월 동안의 매출 정보를 제공한다.</p>
+</li>
+<li>
+<p>예산 총액: 오퍼 예산액을 입력한다.</p>
+</li>
+<li>
+<p>고객 지점 정보 : 선택한 고객 지점 정보를 확인할 수 있다.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>제품을 검색하기 위해서는 상단의 메뉴를 사용하여 검색하고자 하는 벤더, 브랜드, 고객, 그리고 제품 종류를 선택한다.</p>
+</div>
+<div class="sect3">
+<h4 id="_고객_지점_선택_및_추가_상품_선택">6.1.1. 고객 지점 선택 및 추가 상품 선택</h4>
+<div class="literalblock">
+<div class="content">
+<pre>[지점 선택] 버튼을 클릭하면, 선택한 고객에 속한 고객 지점 리스트를 확인할 수 있다.</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer2.gif" alt="offer2">
+</div>
+</div>
+<div class="paragraph">
+<p>하나의 고객 지점에 대하여 오퍼를 내는 것이 기본 업무 흐름이지만, 어떠한 경우에는 여러 고객 지점에 공급할 제품을 오퍼를 내야 되는 경우가 있다. 이러한 경우, 표시된 고객 지점 리스트에서 여러 고객 지점을 선택하고, 아래 화면에서 대표 고객 지점을 설정해준다. 이렇게 하면 대표 고객 지점 이름으로 여러 고객 지점에 공급할 제품을 오퍼할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p>대표지점의 의미: 실질적으로 여러 지점으로 분배되나 명목상으로 하나의 지점으로 주문될 때의 지점 명</p>
+</div>
+<div class="paragraph">
+<p>또한, 특정 오퍼인 경우 특정 고객 지점에게만 공급할 제품을 개별적으로 설정해야 되는 경우가 있다. 이러한 경우에는 [추가 옵션 상품] 란에서 해당 고객 지점을 선택하고, 제품을 검색한다. 검색된 제품이 하단의 좌측 화면에 표시가 되고, [&gt;] 버튼을 눌러서 추가로 주문할 제품을 선택할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p>[확인] 버튼을 눌러서 고객 지점 및 추가 상품에 대한 조건 설정을 완료한다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_고객_상품_등록">6.1.2. 고객 상품 등록</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer3.gif" alt="offer3">
+</div>
+</div>
+<div class="paragraph">
+<p>검색 조건 설정을 마쳤으면, [조회] 버튼을 눌러서 해당 검색 조건에 맞는 제품을 검색한다. 검색 결과를 보면, 'CUST_ID' 컬럼이 비어 있고 배경 색깔이 노란색으로 되어 있는 제품을 볼 수 있다. 검색된 제품 중에 선택한 고객의 취급 상품으로 등록되어 있지 않은 경우 이렇게 표시되어 진다. 고객 상품으로 등록이 안된 제품은 오퍼할 수 없기 때문에 이러한 경우에는 해당 제품을 '고객 상품' 으로 등록해야 한다. '고객 상품' 으로 등록할 수 있는 방법은 2가지이다.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">[EXCEL 로딩] &#8594; [브랜드별 입점정보 EXCEL] 기능 사용 </dt>
+<dd>
+<p>앞장에서 설명했던 기능이다. 엑셀 파일에 브랜드별 입점 정보 데이터를 입력하여 업로드 한다.</p>
+</dd>
+<dt class="hdlist1">현재 화면의 [고객 상품 등록] 기능 활용 </dt>
+<dd>
+<p>현재 제품 검색 화면에서 고객 상품으로 등록하고자 하는 제품을 선택하고, 상단 메뉴의 [고객 상품 등록] 버튼을 클릭한다.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer4.gif" alt="800" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>고객이 부여한 제품 reference 번호가 있는 경우 입력한다. 없는 경우 그냥 제품의 reference 번호를 입력한다. [확인] 버튼을 눌러 고객 상품으로 등록한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer5.gif" alt="offer5">
+</div>
+</div>
+<div class="paragraph">
+<p>'고객 상품' 으로 등록이 되면 'CUST_ID' 컬럼에 금방 등록한 고객 ID 값이 보여지고, 배경 색깔도 하얀 색으로 변한다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_오퍼_수량_계산">6.1.3. 오퍼 수량 계산</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer6.gif" alt="400" width="200">
+</div>
+</div>
+<div class="paragraph">
+<p>[오퍼 등록] 화면의 우측 메뉴를 보면 예산 정보 및 안전 재고율을 설정할 서 있는  화면이 있댜.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>예산 총액 : 오퍼에 사용할 예산 총액을 기입한다. 예산 총액이 초과할 경우 프로그램에서 경고 기능이 동작한다.</p>
+</li>
+<li>
+<p>주문 금액 : 프로그램에서 자동으로 계산한다.</p>
+</li>
+<li>
+<p>안전재고 : 안전재고율을 설정한다.</p>
+</li>
+<li>
+<p>안전재고 일괄적용 : 오퍼할 제품에 대하여 위에서 설정한 안전 재고율을 일괄 적용한다.</p>
+</li>
+<li>
+<p>자동계산 : 설정한 안전 재고율과 3개월간의 판매량 및 기말 재고를 기반으로 오퍼할 수량을 자동으로 계산한다.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+안전 재고율은 일괄 적용이 가능하며, 검색된 제품 리스트에서 '안전 재고' 컬럼값을 직접 수정함으로써 개별 설정할 수도 있다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer7.gif" alt="600" width="400">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+최근 3개월의 매출 데이터가 존재하지 않는 경우, 자동 계산은 동작하지 않는다. 이러한 경우, 직접 주문 수량을 입력해야 한다. 직접 주문 수량을 입력하기 위하여, 원하는 제품의 주문 수량란을 선택하고  주문 수량을 입력한다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_오퍼_장바구니_넣기">6.1.4. 오퍼 장바구니 넣기</h4>
+<div class="paragraph">
+<p>주문할 제품을 조회하고 주문 수량을 입력한 후에는 [장바구니] 버튼을 눌러서 선택한 제품을 오퍼 장바구니에 넣는다. '오퍼 장바구니' 는 오퍼할 제품을 임시로 저장하는 공간이며, 장바구니에 있는 제품들을 선택해서 최종 오퍼를 확정할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer8.gif" alt="offer8">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_posm_상품_오퍼하기">6.1.5. POSM 상품 오퍼하기</h4>
+<div class="paragraph">
+<p>[장바구니] 버튼을 누르면 위와 같은 메세지를 볼 수 있다. 현재 장바구니를 확인할 수 있고, 계속해서 posm 오퍼를 진행할 수도 있다. [POSM 확인] 버튼을 누르면, 현재 벤더에서 공급하는 posm 제품을 조회한 화면을 확인할 수 있다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+위 선택창에서 [POSM 확인] 버튼을 선택하지 않고, [장바구니 확인] 버튼을 클릭해서 장바구니를 확인한 후에도 [오퍼/주문] → [오퍼 등록] 메뉴를 통해서 POSM 제품을 오퍼할 수 있다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer9.gif" alt="offer9">
+</div>
+</div>
+<div class="paragraph">
+<p>위 화면을 보면, 상품 종류가 'POSM' 으로 선택되어 있는 것을 볼 수 있으며, 선택한 벤더의 POSM 제품이 조회된 것을 확인할 수 있다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+'Saleable 상품' 은 검색된 제품이 고객 상품으로 등록이 되어 있지 않으면, 오퍼할 수 없지만, 'POSM 상품' 은 이에 관계 없이 오퍼를 낼 수 있다. 'Saleable 상품' 은 CUST_ID 컬럼이 공백이면, 노란색 배경으로 표시되고 오퍼할 수 없었지만, 위 화면에서는 그러한 제약 조건이 없음을 확인할 수 있다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>'POSM 상품' 은 매출 데이터가 존재하지 않으므로, 수동으로 발주 수량을 입력한다. 입력한 후에 [장바구니] 버튼을 눌러 장바구니에 담긴 상품들을 확인한다.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_오퍼_발행_확정">6.2. 오퍼 발행 확정</h3>
+<div class="paragraph">
+<p>오퍼 장바구니 화면에서는 오퍼를 하기 위해서 등록한 상품 정보를 확인할 수 있다. 오퍼 장바구니 화면은 오퍼 상품을 등록한 후 [장바구니 확인] 버튼을 눌러서 확인할 수 있고, 또는 메인 메뉴의 [오퍼/주문] &#8594; [오퍼 발행 확정] 메뉴를 통해서도 확인할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer10.gif" alt="offer10">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>조회 : 임시 오퍼 상품을 조회한다.</p>
+</li>
+<li>
+<p>기준월 : 임시 오퍼 상품을 조회하기 위한 기간을 설정한다.</p>
+</li>
+<li>
+<p>오퍼하기 : 선택한 상품을 오퍼한다.</p>
+</li>
+<li>
+<p>삭제 : 선택한 상품을 삭제한다.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>기준월을 선택하고 '조회하기' 버튼을 누르면 오퍼를 하기 위하여 임시로 저장한 상품들을 조회할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer11.gif" alt="offer11">
+</div>
+</div>
+<div class="paragraph">
+<p>상품 정보를 확인했으면, [오퍼하기] 버튼을 눌러서 오퍼를 진행한다. 오퍼를 할 때의 제약사항은 아래와 같다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>하나의 오퍼에는 하나의 벤더 제품만 포함되어야 한다.</p>
+</li>
+<li>
+<p>하나의 오퍼에는 하나의 브랜드 제품만 포함되어야 한다.</p>
+</li>
+<li>
+<p>하나의 오퍼에는 하나의 대표고객 지점만 존재해야 합니다.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saleable_오퍼_조회">6.3. SALEABLE 오퍼 조회</h3>
+<div class="paragraph">
+<p>오퍼 장바구니에서 오퍼로 등록하게 되면 상품의 종류(Saleable / POSM ) 에 따라서 개별적으로 오퍼가 발생한다. SALEABLE 오퍼는 메인 메뉴의 [오퍼/주문] &#8594; [SALEABLE 오퍼조회] 에서, POSM 상품 오퍼는 [오퍼/주문] &#8594; [POSM 오퍼조회] 에서 확인할 수 있다.  SALEABLE 상품의 오퍼를 조회하기 위하여 메인 메뉴의 [오퍼/주문] &#8594; [SALEABLE 오퍼조회] 를 클릭한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer12.gif" alt="offer12">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>오퍼 상태 : 오퍼 상태를 선택한다.</p>
+</li>
+<li>
+<p>오퍼일 : 검색하려는 오퍼 기간을 선택한다. 설정한 날짜 사이에 등록된 오퍼 정보를 보여준다.</p>
+</li>
+<li>
+<p>조 회 : 해당 검색 조건을 기반으로 오퍼를 조회한다.</p>
+</li>
+<li>
+<p>오퍼 수정 : 선택한 오퍼를 수정할 수 있는 창을 새롭게 연다.</p>
+</li>
+<li>
+<p>주문서 작성 : 해당 오퍼를 기반으로 주문서를 작성한다. 나중에 좀 더 자세히 설명한다.</p>
+</li>
+<li>
+<p>ANP 추가 : 해당 오퍼를 ANP 에 추가한다. 나중에 좀 더 자세히 설명한다.</p>
+</li>
+<li>
+<p>오퍼 조회창 : 검색 조건에 해당하는 오퍼 항목이 조회된다.</p>
+</li>
+<li>
+<p>오퍼 디테일창 : 선택한 오퍼에 대한 오퍼 상세 사항을 보여준다.</p>
+</li>
+<li>
+<p>오퍼 상품 정보 : 해당 오퍼에 등록한 상품 정보를 확인할 수 있댜.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_오퍼_수정">6.3.1. 오퍼 수정</h4>
+<div class="literalblock">
+<div class="content">
+<pre>오퍼 정보를 수정하려면, 해당 오퍼를 더블클릭하거나 선택 후 [오퍼 수정] 버튼을 클릭한다. 아래와 같은 오퍼 수정창이 열린다.</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer13.gif" alt="offer13">
+</div>
+</div>
+<div class="paragraph">
+<p>오퍼 수정창의 상단에는 오퍼 기본 정보를 수정할 수 있는 기능이 제공된다. 오퍼 기본 정보 수정창에서 수정할 수 있는 오퍼 정보는 'PO 번호' 와 '오퍼 상태' 이다. 나머지 정보들은 나중에 ANP 등록이나 INVOICE 생성 기능을 통해서 자동으로 만들어지는 항목들이기 때문에 수정할 수 없다. 해당 정보를 수정한 후에 [저장 ] 버튼을 클릭해서 변경된 정보를 저장할 수 있다.</p>
+</div>
+<div class="sect4">
+<h5 id="_오퍼_상세_추가">오퍼 상세 추가</h5>
+<div class="paragraph">
+<p>[오퍼 상세 추가] 버튼을 클릭하면 현재 오퍼에 대한 세부 사항을 추가할 수 있는 창이 열린다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer14.gif" alt="600" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Customer 송장 번호, 선적수량, 선적가격, O.C Date 등 상세 내용을 기입하고 [확인] 버튼을 눌러서 오퍼 상세 정보를 저장한다. 필요한 만큼 오퍼 상세 정보는 추가할 수 있다. 추가한 상제 정보는 화면의 중간 부분에서 확인할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer15.gif" alt="offer15">
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_관련_파일_추가">6.3.2. 관련 파일 추가</h4>
+<div class="paragraph">
+<p>오퍼 수정 화면의 하단에는 해당 오퍼과 관련된 첨부 파일을 업로드 할 수 있는 기능이 있다. [파일 업로드] 버튼을 눌러서 첨부하려는 파일을 선택하고 저장할 수 있다. 첨부한 파일은 [파일 다운로드] 메뉴를 통해서 로컬 컴퓨터로 다시 저장할 수 있다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_주문서_작성">6.3.3. 주문서 작성</h4>
+<div class="paragraph">
+<p>주문서 작성 기능은 벤더에게 송부하는 오더폼을 작성하는 기능이다. 다양한 벤더마다 요구하는 오더폼 양식이 모두 다르기 때문에 STA 시스템에서는 벤더에서 제공하는 오더폼 엑셀 양식을 읽어온 후에 읽어온 엑셀 파일에 값을 자동으로 채워 넣은 기능을 제공하고 있다.</p>
+</div>
+<div class="sect4">
+<h5 id="_주문서_작성창_열기">주문서 작성창 열기</h5>
+<div class="paragraph">
+<p>오퍼 조회 화면에서 주문서를 작성할 오퍼를 선택하고, 상단의 [주문서 작성] 버튼을 클릭한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer16.gif" alt="offer16">
+</div>
+</div>
+<div class="paragraph">
+<p>주문서 작성 화면이 실행된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer17.gif" alt="offer17">
+</div>
+</div>
+<div class="paragraph">
+<p>다양한 기능이 제공되기 때문에 조금 복잡해 보일 수 있다. 한단계씩 따라 가면서 설명하겠다. 우선 벤더에서 제공하는 오더폼이 아래와 같은 양식이라고 가정하겠다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer18.gif" alt="offer18">
+</div>
+</div>
+<div class="paragraph">
+<p>우리가 해야 할 일은 위의 엑셀 파일을 읽어와서 [qty],[amount] 항목을 채우는 것이다.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_오더_양식_읽어_오기">오더 양식 읽어 오기</h5>
+<div class="paragraph">
+<p>주문서 작성창의 [찾기] 버튼을 클릭하여, 벤더에서 보내온 주문서 양식 엑셀 파일을 선택한다. 파일을 선택하면 하단의 'Sheet 명' 에서 해당 엑셀 파일에 있는 sheet 를 선택할 수 있다. 주문서 내용이 있는 sheet 명을 선택하고 [미리보기] 버튼을 클릭한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer19.gif" alt="offer19">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_오더_양식_설정하기">오더 양식 설정하기</h5>
+<div class="paragraph">
+<p>미리보기 화면을 유심히 살펴보면, 위의 실제 엑셀 파일의 내용이 미리보기 창에 어떻게 보이는지 알 수 있다. 우리가 원하는 것은 엑셀에 있는  'product no', 'product name' , 'desc', 'qty', 'amount', 'price' 들이 이 엑셀 파일에서 컬럼으로 동작하는 것이다. 그러기 위해서 '미리보기' 위에 있는 '시작 컬럼', '시작 라인' 값을 조절해 주는 것이 필요하다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer20.gif" alt="offer20">
+</div>
+</div>
+<div class="paragraph">
+<p>위의 그림을 보면 원본 엑셀 파일에서 우리가 원하는 데이터는 '3' 번재 라인, 'B' 컬럼에서 시작하는 것을 알 수 있다. 종료컬럼과 종료 라인은 특별히 설정할 필요는 없다. 프로그램에서 시작 컬럼을 'B', 시작 라인을 '3' 으로 설정하고 다시 '미리보기' 버튼을 클릭한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer21.gif" alt="offer21">
+</div>
+</div>
+<div class="paragraph">
+<p>우리가 원하는 모양으로 미리보기 가 보이는 것을 확인할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer22.gif" alt="offer22">
+</div>
+</div>
+<div class="paragraph">
+<p>이제는 오더폼의 qty, amount 컬럼을 채우기 위한 컬럼 매핑 작업을 해야 한다. 화면의 중간에 보면 Qty, Amount, Refer 컬럼과 대응하는 엑셀 파일의 컬럼명을 설정하는 기능이 있다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Qty : 주문 수량 &#8594; 원본 엑셀의 qty 컬럼과 매핑</p>
+</li>
+<li>
+<p>Amount : 주문 금액 &#8594; 원본 엑셀의 amount 컬럼과 매핑</p>
+</li>
+<li>
+<p>Refer : 상품의 reference 번호 &#8594; 원본 엑셀의 product no 와 매핑</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Refer 컬럼은 해당 상품을 인식할 수 있는 고유 번호 컬럼이다. 이 컬럼의 값을 기준으로 해서 Qty, Amount 값이 채워지게 된다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>만일 벤더의 오더폼이 Qty 값만 입력하면 자동으로 주문금액 컬럼이 채워지는 구조로 되어 있다면, 아래의 'Amount 항목은 계산되어지는 값입니다.' 를 체크해 준다.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_데이터_검증_2">데이터 검증</h5>
+<div class="paragraph">
+<p>주문서를 작성하기 전에 데이터 유효성 검증을 수행해야 할 필요가 있을 때가 있다. 이러한 경우, 프로그램 하단의 유효성 검사 기능을 통해서 데이터 유효성 검사를 할 수가 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer23.gif" alt="offer23">
+</div>
+</div>
+<div class="paragraph">
+<p>데이터 검증은 '상품 검증' 과 '가격 검증' 두가지로 나뉘어 진다. '가격 검증&#8217;은 STA 시스템에 등록된 상품의 가격과 주문서에 가격 정보가 존재하는 경우 가격 정보가 일치하는지 검증하는 과정이다. 주문서에서 가격 정보가 존재하는 컬럼을 선택하고 '가격 검증' 버튼을 클릭하면 검증 과정을 거치게 된다. 검증할 필요가 없는 경우 체크박스를 해제한다.</p>
+</div>
+<div class="paragraph">
+<p>두번째 '상품 검증' 은 시스템에 등록된 상품이 주문서에 존재하는지 검증하는 과정이다. 검증할 필요가 없는 경우 체크박스를 해제한다.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_주문서_작성_2">주문서 작성</h5>
+<div class="paragraph">
+<p>데이터 검증 과정까지 성공리에 마무리 되었다면, 하단의 [주문서 작성] 버튼을 눌러서 주문서를 작성한다. 주문서는 자동으로 STA 시스템의 클라우드 서버에 저장되고 로컬에도 다른 이름으로 저장된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer24.gif" alt="600" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>최종적으로 작성된 주문서는 아래와 같다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/offer25.gif" alt="offer25">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2018-09-09 13:02:43 대한민국 표준시
+Last updated 2018-09-19 09:40:24 대한민국 표준시
 </div>
 </div>
 </body>

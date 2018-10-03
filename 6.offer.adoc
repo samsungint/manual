@@ -213,3 +213,14 @@ image::images/offer24.gif[600,400]
 
 image::images/offer25.gif[]
 
+===== ANP 추가 ===== 
+선택한 오퍼를 ANP 에 추가하는 기능이다. ANP 에 추가하고자 하는 오퍼를 선택하고, 상단의 [ANP 등록] 버튼을 누른다.
+
+image::images/offer26.gif[]
+
+IMPORTANT: 여러개의 오퍼를 ANP 에 등록하기 위한 제약사항이 있다. 
+
+. 선택한 오퍼들은  단일 브랜드에 대한 오퍼이어야 한다.
+. 선택한 오퍼들은 하나의 고객에 대한 오퍼이어야 한다.
+. 오퍼 상세에 있는 ** Customer Invoice Date ** 가 한달 이내인 오퍼만 가능하다.
+
