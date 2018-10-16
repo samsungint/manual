@@ -6,6 +6,7 @@ about: Create a report to help us improve
 
 **버그 설명**
 가능하면 버그에 대하여 정확하게 설명해 주십시요.
+
 [버그 설명]
 
 
