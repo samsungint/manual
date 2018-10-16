@@ -23,6 +23,7 @@ about: Create a report to help us improve
 
 
 **3. 화면 캡처**
+
 화면 캡처가 필요하다고 생각되시면 캡처 화면을 같이 올려주세요.
 
 **기타 사항**
