@@ -9,7 +9,7 @@ image::images/login.gif[800,400]
 
 === 사용자 생성 ===
 새로운 계정을 생성하는 화면에서 사용자 ID 와 암호, 그리고 추가 정보들을 입력한다. 사용자 ID 와 암호는 필수 항목이다.
-사용자 ID는 개인에게 부여받은 SAMSUNG INTERNATIONAL COMPANY 입사시 확정한 메일 아이디로 함을 원칙으로 한다.
+
 
 image::images/signup.gif[800,400]
 
