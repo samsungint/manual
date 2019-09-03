@@ -18,6 +18,6 @@ include::sales.adoc[]
 include::finance.adoc[]
 include::mywork.adoc[]
 include::excel_loading.adoc[]
-
+include::Help.adoc[]
 
 
