@@ -8,7 +8,7 @@
 
 메인 메뉴에서 [목표/버젯] -> [목표/버젯 조회] 메뉴를 클릭하며, 목표/버젯 조회 화면을 실행한다.
 
-=image::images/budget_main.gif[]
+image::images/budget_main.gif[]
 
 종류::
 Budget/Expnese 중 선택할 수 있다. 
