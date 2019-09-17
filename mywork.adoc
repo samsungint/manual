@@ -84,3 +84,6 @@ image::images/add_planning.gif[]
 
 === Planning 리포트 ===
 등록한 todo 에 대한 리포트를 확인할 수 있다. 
+
+image::images/planning_report.gif[]
+

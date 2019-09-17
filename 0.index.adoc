@@ -15,9 +15,11 @@ include::master_data.adoc[]
 include::offer.adoc[]
 include::anp.adoc[]
 include::sales.adoc[]
+include::hr.adoc[]
 include::finance.adoc[]
 include::mywork.adoc[]
 include::excel_loading.adoc[]
+include::window.adoc[]
 include::Help.adoc[]
 
 
