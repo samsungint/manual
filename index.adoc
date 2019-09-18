@@ -1,5 +1,4 @@
 = STA System Manual =
-
 :doctype: book
 :toc: left
 :sectnums:
