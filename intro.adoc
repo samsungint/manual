@@ -3,4 +3,3 @@
 
 STA System (Samsung Travel Retail business Assistant) 은 SAMSUNG INTERNATIONAL COMPANY 의 업무 관리 시스템이다. 해당 문서는 STA System의 기능을 설명하는 매뉴얼이다.
 
-최초작성: 2018.09.06
