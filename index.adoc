@@ -1,6 +1,5 @@
 = STA System Manual =
-김경남<knamkim@gmail.com>
-v0.1
+
 :doctype: book
 :toc: left
 :sectnums:
