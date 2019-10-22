@@ -8,16 +8,17 @@
 
 include::intro.adoc[]
 include::login.adoc[]
-include::system.adoc[]
+include::system_admin.adoc[]
 include::budget.adoc[]
 include::master_data.adoc[]
 include::offer.adoc[]
 include::anp.adoc[]
 include::sales.adoc[]
-include::hr.adoc[]
+include::hr_admin.adoc[]
 include::finance.adoc[]
 include::mywork.adoc[]
 include::excel_loading.adoc[]
 include::window.adoc[]
+
 
 
