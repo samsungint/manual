@@ -53,7 +53,9 @@ image::images/offer3.gif[]
 
 image::images/offer4.gif[800,600]
 
-고객이 부여한 제품 reference 번호가 있는 경우 입력합니다. 없는 경우 그냥 제품의 reference 번호를 입력합니다. [확인] 버튼을 눌러 고객 상품으로 등록합니다.
+고객이 부여한 제품 reference 번호가 있는 경우 입력합니다. 없는 경우 그냥 제품의 reference 번호를 입력합니다. [확인] 버튼을 눌러 고객 상품으로 등록합니다. 
+
+TIP: Customer Reference 에 기존의 Reference 번호를 복사하고자 하는 경우 'Reference 복사' 버튼을 클릭하면 됩니다. 제품의 특성상 BarCode 가 Customer Referenece 로 활용되는 경우 'BarCode 복사 ' 버튼을 누르면 일괄적으로 Barcode 가 Customer Reference 에 복사됩니다.
 
 image::images/offer5.gif[]
 
